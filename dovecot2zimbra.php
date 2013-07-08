@@ -48,6 +48,6 @@ if (is_file($usersFile)) {
         }
 	    echo "Syncing User " . $userMail . " from " . $hostOrigin . " to " . $hostDest . PHP_EOL;
         // Mailbox migration
-        exec("imapsync --nosyncacls --syncinternaldates \--host1   " . $hostOrigin . " --user1 " . $userMail . " --authuser1 " . $masterUser . " --password1 " . $masterPwd . " \--host2 " . $hostDest . " --user2 " . $userMail . " --authuser2 " . $masterUser2 . " --password2 " . $masterPwd2 . " --ssl2");
+        exec("imapsync --nosyncacls --syncinternaldates \--host1   " . $hostOrigin . " --user1 " . $userMail . " --authuser1 " . $masterUser1 . " --password1 " . $masterPwd1 . " \--host2 " . $hostDest . " --user2 " . $userMail . " --authuser2 " . $masterUser2 . " --password2 " . $masterPwd2 . " --ssl2");
     }
 }

@@ -37,7 +37,7 @@ if (is_file($usersFile)) {
             // User creation
 	        echo "Creating user ".$userMail . PHP_EOL;
             exec("zmprov ca " . $userMail . " changePassword");
-            // If find CRAM-MD5 set the default password and User must change
+            // If find CRAM-MD5 set the default password and User must change the password
             if (!preg_match('/CRAM-MD5/', $userPass)) {
 	            echo "Setting user ".$userMail ." password ". PHP_EOL;
                 exec("zmprov ma " . $userMail . " userPassword " . "'{crypt}" . $userPass . "'");
